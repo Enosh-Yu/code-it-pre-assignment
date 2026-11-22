@@ -1,0 +1,41 @@
+.container {
+  max-width: 480px;
+  margin: 48px auto;
+  padding: 0 16px;
+  font-family: system-ui, sans-serif;
+}
+.memo-form {
+  display: flex;
+  gap: 8px;
+}
+.memo-form input {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+.memo-form input[aria-invalid="true"] {
+  border-color: #d33;
+}
+.memo-form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.memo-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.error {
+  color: #d33;
+  margin: 8px 0 0;
+}
+.memo-list {
+  margin-top: 24px;
+  padding-left: 20px;
+}
+.memo-list li {
+  padding: 4px 0;
+}
