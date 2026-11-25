@@ -28,6 +28,8 @@ export default function App() {
     event.preventDefault();
     setError("");
 
+    // TODO 3
+
     // 1) 화면 검증: 명백히 잘못된 입력은 요청을 보내기 전에 막습니다.
     if (!SKIP_CLIENT_VALIDATION && text.trim() === "") {
       setError("메모 내용을 입력해 주세요.");
@@ -36,6 +38,7 @@ export default function App() {
 
     setIsSubmitting(true);
     try {
+      // TODO 4
       // 2) 서버에 등록 요청을 보냅니다.
       const res = await fetch("/api/memos", {
         method: "POST",
@@ -77,6 +80,7 @@ export default function App() {
         </button>
       </form>
 
+      {/* TODO 5 */}
       {error && (
         <p id="memo-error" className="error" role="alert">
           {error}

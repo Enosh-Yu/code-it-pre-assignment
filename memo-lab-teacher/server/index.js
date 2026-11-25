@@ -13,6 +13,7 @@ let nextId = 1;
 
 // 입력값 검증: 통과하면 정리된 값을, 실패하면 이유를 돌려줍니다.
 function validateMemo(body) {
+  // TODO 1
   const text = body?.text;
 
   if (typeof text !== "string") {
@@ -39,6 +40,7 @@ app.get("/api/memos", (req, res) => {
 app.post("/api/memos", (req, res) => {
   const result = validateMemo(req.body);
 
+  // TODO 2
   if (!result.ok) {
     return res.status(400).json({
       error: { field: "text", message: result.message },
